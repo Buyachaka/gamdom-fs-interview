@@ -1,0 +1,3 @@
+# Ignore the IntelliJ/WebStorm project files
+.idea/
+node_modules/

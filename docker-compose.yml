@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./gamdom-sports-betting
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000" # Expose frontend on localhost:3001
+      - "5173:5173"
+    volumes:
+      - ./gamdom-sports-betting:/app
+      - /app/node_modules
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./gamdom-sports-betting-backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Expose backend on localhost:3000
+    volumes:
+      - ./gamdom-sports-betting-backend:/app
+      - /app/node_modules+
+    command: npm run dev
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: gamdom_admin
+      DB_PASSWORD: admin_gamdom
+      DB_NAME: gamdom_sports_bet_db
+      CHOKIDAR_USEPOLLING: "true"
+
+  db:
+    image: postgres:15
+    container_name: postgres_container
+    ports:
+      - "5432:5432" # Expose database on localhost:5432
+    environment:
+      POSTGRES_USER: gamdom_admin
+      POSTGRES_PASSWORD: admin_gamdom
+      POSTGRES_DB: gamdom_sports_bet_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
