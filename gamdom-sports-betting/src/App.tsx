@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/sports" element={<SportsPage />} />
         <Route path="/" element={<LoginPage />} />
+        <Route path="*" element={<SportsPage />} />
       </Routes>
     </Router>
   );

@@ -4,6 +4,16 @@
 
 This repository provides a local development environment setup using Docker Compose, with a couple of commands to get the application up and running with hot-reload.
 
+## Login Page
+![Screenshot](/images/img1.png)
+
+## Bet Pop-upc
+![Screenshot](images/img2.png)
+
+## Bet Confirmed
+![Screenshot](images/img3.png)
+
+
 ---
 
 ## Prerequisites
