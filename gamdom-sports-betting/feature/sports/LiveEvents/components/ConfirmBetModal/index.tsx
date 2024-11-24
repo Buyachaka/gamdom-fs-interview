@@ -40,8 +40,10 @@ export default function ConfirmBetModal({
     const [potentialWin, setPotentialWin] = useState(0);
 
     const handleSubmit = (event: React.FormEvent) => {
-        event.preventDefault(); // Prevent form reload
+        event.preventDefault();
         toast.success(`Bet placed, good luck! 🍀`);
+        setCurrentBet(0);
+        setPotentialWin(0);
         onClose();
     };
     const onPopUpClose = () => {

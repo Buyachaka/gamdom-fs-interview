@@ -13,18 +13,17 @@ module.exports = {
         allowNull: false,
       },
       homeOdds: {
-        type: Sequelize.DECIMAL(10, 2), // Match the model
+        type: Sequelize.DECIMAL(10, 2),
         allowNull: false,
       },
       drawOdds: {
-        type: Sequelize.DECIMAL(10, 2), // Match the model
+        type: Sequelize.DECIMAL(10, 2),
         allowNull: false,
       },
       awayOdds: {
-        type: Sequelize.DECIMAL(10, 2), // Match the model
+        type: Sequelize.DECIMAL(10, 2),
         allowNull: false,
       },
-      // No timestamps as per the model
     });
   },
 

@@ -20,7 +20,6 @@ export default function (router: any) {
     });
 
 
-    //This is real football not "soccer"
     router.get('/football/events', async (req: any, res: any) => {
         if (req.isAuthenticated()) {
             try {
