@@ -8,6 +8,10 @@ RUN npm install
 
 COPY . .
 
+RUN apt-get update && apt-get install -y netcat-openbsd
+
 EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+RUN chmod +x entrypoint.sh
+
+CMD ["sh", "./entrypoint.sh"]

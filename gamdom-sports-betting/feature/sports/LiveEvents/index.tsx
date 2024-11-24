@@ -79,6 +79,6 @@ export default function LiveEvents() {
             </div>
             <ConfirmBetModal eventTitle={selectedEvent?.title} odd={selectedEvent?.odd}
                              oddTitle={selectedEvent?.oddTitle} show={showConfirmModal} onClose={() => setShowConfirmModal(false)} />
-            @        </>
+                    </>
     );
 }

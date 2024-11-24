@@ -36,7 +36,9 @@ Event.init(
     },
     {
         sequelize,
-        tableName: 'events',
+        tableName: 'Events',
         timestamps: false,
     }
 );
+
+export default Event;

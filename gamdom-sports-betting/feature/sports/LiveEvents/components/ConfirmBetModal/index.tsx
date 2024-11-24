@@ -10,6 +10,16 @@ type ConfirmBetModalProps = {
     onClose: () => void;
 };
 
+type betDictionary = {
+    [key: string]: string;
+}
+
+const betDictionary: betDictionary= {
+    '1': "Home",
+    'X': "Draw",
+    '2': "Away",
+}
+
 const headerTheme = {
     base: 'bg-gray-800 text-white flex p-3 rounded-t-lg bg-white border-b justify-center align-center',
     close: {
@@ -41,7 +51,6 @@ export default function ConfirmBetModal({
     }
 
     useEffect(() => {
-        // Ensure `currentBet` is a valid number and `odd` is defined
         if (isNaN(currentBet) || odd === undefined || odd === null) {
             return;
         }
@@ -57,11 +66,11 @@ export default function ConfirmBetModal({
                     <form onSubmit={handleSubmit}>
                         <div className="flex flex-col justify-center align-middle">
                             <div className={"m-auto"}>
-                                Enter bet on <b className="px-1">{oddTitle}</b> with odd <b className="ml-1">{odd}x</b>?
+                                Enter bet on <b className="px-0.5">{oddTitle && betDictionary[oddTitle]}</b> with odd <b className="ml-1">{odd}x</b>?
                             </div>
                             <input
                                 max={30}
-                                min={0}
+                                min={1}
                                 onChange={(e) => setCurrentBet(Number(e.target.value))}
                                 className={`m-auto mt-3 w-1/5 rounded-2xl `}
                                 type="number"
@@ -69,8 +78,7 @@ export default function ConfirmBetModal({
                             />
                             <div className={"m-auto mt-2 text-center"}>
                                 <div> Pontential win: </div>
-
-                                <span className={"w-full text-center text-yellow-400 text-2xl"}>{potentialWin}$</span>
+                                <span className={"w-full text-center text-2xl"}>{Math.floor(potentialWin * 100) / 100}$</span>
                             </div>
                         </div>
                         <div className="mt-5 flex w-full justify-center gap-8">

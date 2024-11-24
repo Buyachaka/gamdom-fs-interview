@@ -24,8 +24,8 @@ services:
       - "3000:3000" # Expose backend on localhost:3000
     volumes:
       - ./gamdom-sports-betting-backend:/app
-      - /app/node_modules+
-    command: npm run dev
+    command: ["sh", "./entrypoint.sh"]
+    working_dir: /app
     depends_on:
       - db
     environment:
