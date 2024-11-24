@@ -3,17 +3,6 @@
 **Gamdom-Sports-Betting** is a sports betting application
 
 This repository provides a local development environment setup using Docker Compose, with a couple of commands to get the application up and running with hot-reload.
-
-## Login Page
-![Screenshot](/images/img1.png)
-
-## Bet Pop-upc
-![Screenshot](images/img2.png)
-
-## Bet Confirmed
-![Screenshot](images/img3.png)
-
-
 ---
 
 ## Prerequisites
@@ -61,3 +50,14 @@ The app is configured using Docker Compose version `3.8`. The configuration defi
    docker-compose build
    docker-compose up
    ```
+   
+## Screenshots
+
+1. **Login Page** 
+![Screenshot](/images/img1.png)
+
+2. **Bet Pop-up**
+![Screenshot](images/img2.png)
+
+3. **Bet Confirmed**
+![Screenshot](images/img3.png)

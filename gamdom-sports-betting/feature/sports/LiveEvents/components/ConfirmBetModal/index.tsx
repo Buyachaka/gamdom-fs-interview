@@ -68,7 +68,7 @@ export default function ConfirmBetModal({
                     <form onSubmit={handleSubmit}>
                         <div className="flex flex-col justify-center align-middle">
                             <div className={"m-auto"}>
-                                Enter bet on <b className="px-0.5">{oddTitle && betDictionary[oddTitle]}</b> with odd <b className="ml-1">{odd}x</b>?
+                                Enter bet on <b className="px-0.5">{oddTitle && betDictionary[oddTitle]}</b> with odd <b className="ml-1">{odd}x</b>:
                             </div>
                             <input
                                 max={30}
@@ -84,11 +84,11 @@ export default function ConfirmBetModal({
                             </div>
                         </div>
                         <div className="mt-5 flex w-full justify-center gap-8">
-                            <Button type="submit" className="bg-emerald-400">
-                                Confirm Bet
-                            </Button>
                             <Button onClick={onPopUpClose} className="bg-gray-600" type="button">
                                 Cancel
+                            </Button>
+                            <Button type="submit" className="bg-emerald-400">
+                                Confirm Bet
                             </Button>
                         </div>
                     </form>
