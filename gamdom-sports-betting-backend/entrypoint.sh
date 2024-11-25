@@ -7,8 +7,9 @@ while ! nc -z db 5432; do
 done
 echo "Database is ready!"
 
+# Install dependencies
+echo "Installing dependencies..."
 npm install
-
 # Run migrations and seeders
 echo "Running migrations..."
 npx sequelize-cli db:migrate

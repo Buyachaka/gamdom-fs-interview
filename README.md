@@ -3,6 +3,8 @@
 **Gamdom-Sports-Betting** is a sports betting application
 
 This repository provides a local development environment setup using Docker Compose, with a couple of commands to get the application up and running with hot-reload.
+
+A quick video explanation of what the application does can be found [here](https://lucas-janequine.tinytake.com/msc/MTAzNDE4MjFfMjQwMjkxNDE).
 ---
 
 ## Prerequisites
@@ -39,6 +41,8 @@ The app is configured using Docker Compose version `3.8`. The configuration defi
     - A PostgreSQL instance running on `localhost:5432`.
     - Uses environment variables for user, password, and database name.
 
+**Note:**
+ - Make sure that all 3 ports are not used in the system  (3000, 5173, 5432)
 ---
 
 ## Running the Application Locally
