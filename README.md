@@ -45,10 +45,14 @@ The app is configured using Docker Compose version `3.8`. The configuration defi
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-repo-url/gamdom-sports-betting.git
+   git clone https://github.com/Buyachaka/gamdom-fs-interview
    cd gamdom-sports-betting
    docker-compose build
    docker-compose up
+   Access the frontend at http://localhost:5173
+   Enter the following credentials to login:
+    Username: admin
+    Password: admin
    ```
    
 ## Screenshots

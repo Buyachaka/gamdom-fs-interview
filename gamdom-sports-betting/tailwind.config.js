@@ -15,6 +15,7 @@ export default {
     'focus:border-emerald-400',
     'hover:border-emerald-400',
     'group-hover:text-white',
+     'sm:pr-0',
     {
       pattern: /./
     }

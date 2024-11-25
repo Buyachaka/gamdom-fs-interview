@@ -41,7 +41,8 @@ export default function LiveEvents() {
             <div className="mt-5 flex justify-center">
                 <div className="grid w-fit grid-cols-1  flex-col items-center rounded-lg bg-black p-6 text-center shadow-lg">
                     <h2 className="mb-6 text-3xl font-bold text-white">Live Events 🛑</h2>
-                    <div className="grid w-full grid-cols-1 gap-6 overflow-y-auto overflow-x-visible overscroll-y-auto pr-0 md:grid-cols-3">
+                    <div
+                        className="grid max-h-96 w-full grid-cols-1 gap-6 overflow-y-auto overflow-x-visible overscroll-y-auto pr-5 sm:pr-0 md:grid-cols-3">
                         {
                             isLoading && <Spinner/>
                         }
@@ -54,23 +55,30 @@ export default function LiveEvents() {
                                     {event.event_name}
                                 </h3>
 
+                                <span className="mb-2 text-center  text-gray-500 text-xs font-semibold ">
+                                    Match winner
+                                </span>
+
 
                                 <div className="flex w-full justify-between">
-                                    <OdsDisplay title={"1"} odd={event.homeOdds} handleOddsClick={() => handleOddsClick({
-                                        title: event.event_name,
-                                        oddTitle: "1",
-                                        odd: event.homeOdds
-                                    })}/>
-                                    <OdsDisplay title={"X"} odd={event.drawOdds} handleOddsClick={() => handleOddsClick({
-                                        title: event.event_name,
-                                        oddTitle: "X",
-                                        odd: event.drawOdds
-                                    })}/>
-                                    <OdsDisplay title={"2"} odd={event.awayOdds} handleOddsClick={() => handleOddsClick({
-                                        title: event.event_name,
-                                        oddTitle: "2",
-                                        odd: event.awayOdds
-                                    })}/>
+                                    <OdsDisplay title={"1"} odd={event.homeOdds}
+                                                handleOddsClick={() => handleOddsClick({
+                                                    title: event.event_name,
+                                                    oddTitle: "1",
+                                                    odd: event.homeOdds
+                                                })}/>
+                                    <OdsDisplay title={"X"} odd={event.drawOdds}
+                                                handleOddsClick={() => handleOddsClick({
+                                                    title: event.event_name,
+                                                    oddTitle: "X",
+                                                    odd: event.drawOdds
+                                                })}/>
+                                    <OdsDisplay title={"2"} odd={event.awayOdds}
+                                                handleOddsClick={() => handleOddsClick({
+                                                    title: event.event_name,
+                                                    oddTitle: "2",
+                                                    odd: event.awayOdds
+                                                })}/>
                                 </div>
                             </div>
                         ))}
