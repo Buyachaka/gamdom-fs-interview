@@ -4,7 +4,8 @@
 
 This repository provides a local development environment setup using Docker Compose, with a couple of commands to get the application up and running with hot-reload.
 
-A quick video explanation of what the application does can be found [here](https://lucas-janequine.tinytake.com/msc/MTAzNDE4MjFfMjQwMjkxNDE).
+**A quick video explanation of what the application does can be found**
+ - [here](https://lucas-janequine.tinytake.com/msc/MTAzNDE4MjFfMjQwMjkxNDE).
 ---
 
 ## Prerequisites
